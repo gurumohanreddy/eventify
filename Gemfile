@@ -33,6 +33,8 @@ gem 'bootstrap-sass'
 
 gem 'bootswatch-rails'
 
+gem 'simple_form'
+#generates simple_form which is easy to use than the default ruby form
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
