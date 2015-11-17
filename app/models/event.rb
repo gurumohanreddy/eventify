@@ -6,7 +6,7 @@ def self.pretty_new
   ev.end_time = ev_time + 1.hour
 
   return ev
-  
+
 end
 
 end
