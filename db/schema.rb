@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117102234) do
+ActiveRecord::Schema.define(version: 20151117155950) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20151117102234) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "event_id"
   end
+
+  add_index "rsvps", ["event_id"], name: "index_rsvps_on_event_id"
 
 end
