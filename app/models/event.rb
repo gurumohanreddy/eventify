@@ -9,4 +9,8 @@ def self.pretty_new
 
 end
 
+def single_day?
+  start_time.to_date == end_time.to_date
+end
+
 end
