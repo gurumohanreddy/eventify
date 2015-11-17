@@ -1,8 +1,19 @@
 <h1>Events</h1>
+<section id="events">
+ <% if @events.any? %>
+                          <% if false  %>
+                          <ul>
+                          <% @events.each do |event| %>
+                            <%= render partial:"events/event" ,locals: {event: event} -%>
+                            <%= render event %>
+                          <% end %>
+                          <% end  %>
 
-<ul>
-<% Event.all.each do |event| %>
-    <li><%= event.inspect %></li>
-<% end %>
-
+    <%= render @events  %>                        
+<%else  %>
+  <div class="well">
+     No Events yet
+  </div>
+<%end  %>
 </ul>
+</section>

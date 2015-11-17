@@ -21,6 +21,8 @@ class EventsController < ApplicationController
   end
 
   def index
+
+    @events = Event.all
   end
 
 private
@@ -28,5 +30,5 @@ private
       params.require(:event).permit(:title,:description)
   end
 
-  
+
 end
