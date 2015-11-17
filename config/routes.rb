@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'rsvps/create'
 
 
   resources:events
