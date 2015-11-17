@@ -1,15 +1,15 @@
 <h1>Events</h1>
 <section id="events">
  <% if @events.any? %>
-                          <% if false  %>
-                          <ul>
-                          <% @events.each do |event| %>
-                            <%= render partial:"events/event" ,locals: {event: event} -%>
-                            <%= render event %>
-                          <% end %>
-                          <% end  %>
+                              <% if false  %>
+                              <ul>
+                              <% @events.each do |event| %>
+                                <%= render partial:"events/event" ,locals: {event: event} -%>
+                                <%= render event %>
+                              <% end %>
+                              <% end  %>
 
-    <%= render @events  %>                        
+    <%= render @events  %>
 <%else  %>
   <div class="well">
      No Events yet
