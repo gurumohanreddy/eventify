@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#land'
+  # root 'home#land' ---- commenting it out as authenticated:user is used instead of it
+  authenticated :user do
+  root to: 'events#index', as: :authenticated_root
+end
+root to: 'home#land'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
