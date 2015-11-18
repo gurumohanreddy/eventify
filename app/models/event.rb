@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
   has_many :rsvps
+  belongs_to :user
+   validates :user,presence:true
 def self.pretty_new
   ev = self.new
   ev_time = Time.now.beginning_of_hour()+ 1.hour
